@@ -21,7 +21,7 @@ cs.factory("LocationUtils", function (CesiumService) {
             return Cesium.Math.toDegrees(cartographic.latitude).toFixed(precision);
         },
         generateLocation: function () {
-            return Math.random() * 100 + 1;
+            return Math.random() * 200 + 1;
         }
     }
 });

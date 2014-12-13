@@ -26,10 +26,7 @@ cs.factory("ModelUtils", function (CesiumService, LocationUtils) {
                 var geoX = LocationUtils.generateLocation();
                 var geoY = LocationUtils.generateLocation();
                 var modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(Cesium.Cartesian3.fromDegrees(geoX, geoY, height));
-
-                var model = CesiumService.getScene().primitives.add(constructModel(modelUrl, modelMatrix));
-
-
+                CesiumService.getScene().primitives.add(constructModel(modelUrl, modelMatrix));
             },
             createModel: function (modelUrl, height) {
                 height = Cesium.defaultValue(height, 0.0);

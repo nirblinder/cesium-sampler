@@ -68,6 +68,9 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
 
     $scope.addCustomGeoJson = function () {
         GeoJsonUtils.appendDataSource("/Apps/SampleData/JSGeoExample/micha.geojson");
+
+        // just for this usecase
+        $scope.flyToJerusalem();
     };
 
     $scope.addPlaneModel = function () {
@@ -81,7 +84,9 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
     };
 
     $scope.addFighterModel = function () {
-        ModelUtils.createModel('/Apps/SampleData/models/plane/F15/F-15C_Eagle.gltf', 6000.0);
+        for (var i = 0; i < 20; i++) {
+            ModelUtils.createModel('/Apps/SampleData/models/plane/F15/F-15C_Eagle.gltf', 6000.0);
+        }
     };
 
     $scope.addHelicopterModel = function () {
@@ -93,10 +98,8 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
     };
 
     $scope.addAllModels = function () {
-        for (var i = 0; i < 20; i++) {
-            $scope.addFighterModel();
-            $scope.addHelicopterModel();
-            $scope.addTankModel();
-        }
+        $scope.addFighterModel();
+        $scope.addHelicopterModel();
+        $scope.addTankModel();
     }
 });
