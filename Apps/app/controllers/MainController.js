@@ -62,6 +62,10 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
         $scope.showLocationLabel = !$scope.showLocationLabel;
     };
 
+    $scope.clearScreen = function () {
+        handleClearScreenEvent();
+    };
+
     $scope.addUsStatesDataSource = function () {
         GeoJsonUtils.appendDataSource("/Apps/SampleData/ne_10m_us_states.topojson");
     };
@@ -102,4 +106,9 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
         $scope.addHelicopterModel();
         $scope.addTankModel();
     }
+
+    $scope.clearAllModels = function () {
+        CesiumService.getScene().primitives.removeAll();
+    }
+
 });
