@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Use correct character set. -->
+  <meta charset="utf-8">
+  <!-- Tell IE to use the latest, best version (or Chrome Frame if pre-IE11). -->
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+  <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+  <title>Hello World!</title>
+  <script src="../Build/Cesium/Cesium.js"></script>
+  <style>
+      @import url(../Build/Cesium/Widgets/widgets.css);
+      html, body, #cesiumContainer {
+          width: 100%; height: 100%; margin: 0; padding: 0; overflow: hidden;
+      }
+  </style>
+</head>
+<body>
+  <div id="cesiumContainer"></div>
+  <script>
+    var viewer = new Cesium.Viewer('cesiumContainer');
+    var scene = viewer.scene;
+    var pinBuilder = new Cesium.PinBuilder();
+    var billboardCollection = viewer.scene.primitives.add(new Cesium.BillboardCollection());
+
+
+    var helicopterURL = '../Build/models/Helicopter/Helicopter.gltf';
+    var tankURL = '../Build/models/T90/T-90.gltf';
+    var f15URL = '../Build/models/F15/F-15C_Eagle.gltf';
+
+    for (i = 0; i < 40; i++) {
+        createTank(generateRandomCoordinate(), generateRandomCoordinate());
+        createFighter(generateRandomCoordinate(), generateRandomCoordinate());
+        createHelicopter(generateRandomCoordinate(), generateRandomCoordinate());
+    }
+
+    function generateRandomCoordinate() {
+        return Math.random() * 100 + 1;
+    }
+
+    function createModel(geoX, geoY, height, url) {
+        var modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(
+                  Cesium.Cartesian3.fromDegrees(geoX, geoY, height));
+        var model = scene.primitives.add(Cesium.Model.fromGltf({
+              url : url,
+              modelMatrix : modelMatrix,
+//              minimumPixelSize: 120,
+              scale: 3000
+        }));
+
+        billboardCollection.add({
+            image : pinBuilder.fromColor(Cesium.Color.ROYALBLUE, 48),
+            verticalOrigin : Cesium.VerticalOrigin.BOTTOM,
+            position : Cesium.Cartesian3.fromDegrees(geoX, geoY, 0)
+        });
+    }
+
+    function createFighter(geoX, geoY) {
+      createModel(geoX, geoY, 10000.0, f15URL)
+    }
+
+    function createHelicopter(geoX, geoY) {
+        createModel(geoX, geoY, 10000.0, helicopterURL)
+    }
+
+    function createTank(geoX, geoY) {
+        createModel(geoX, geoY, 0.0, tankURL)
+    }
+
+
+  </script>
+</body>
+</html>
