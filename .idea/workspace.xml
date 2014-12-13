@@ -2,72 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="53d4604c-fb67-43a7-b375-3f13dda28be3" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/Body 1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/Body 2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/Body 3.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/Body 4.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/Body 5.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/Body 6.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/F15C.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/Glass.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/tank/T90/Gun.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/tank/T90/Main Body 2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/tank/T90/Main Body.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/Parts 1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/tank/T90/T-90.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/tank/T90/Turret.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/intpanel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/panel.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/panel1.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/panel2.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/pilot.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/weapons.png" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/app/services/BillboardUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/app/services/CameraUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/app/services/CesiumEventUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/app/services/CesiumService.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Cesium_Sampler_node_modules.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/F15/F-15C_Eagle.gltf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/app/services/GeoJsonUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/app/services/GeometryUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/app/services/LabelUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/app/services/LocationUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/app/controllers/MainController.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/Micha.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/app/services/ModelUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/app/services/PinUtils.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/tank/T90/T-90.gltf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/angular/angular-animate.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/angular/angular-aria.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/angular/angular-cookies.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/angular/angular-loader.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/angular/angular-messages.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/angular/angular-mocks.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/angular/angular-resource.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/angular/angular-route.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/angular/angular-sanitize.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/angular/angular-scenario.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/angular/angular-touch.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/angular/angular.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/app/app.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/bootstrap/bootstrap.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/bootstrap/bootstrap.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/css/core.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/drone/drone.gltf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/models/plane/fighter.gltf" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/jquery/jquery-2.1.1.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/css/main.css" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/app/views/main.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/JSGeoExample/map.geojson" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/SampleData/JSGeoExample/micha.geojson" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Apps/vendor/bootstrap/ui-bootstrap-tpls-0.11.2.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="$PROJECT_DIR$/.idea/.name" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/Cesium Project.iml" afterPath="$PROJECT_DIR$/.idea/Cesium Project.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Apps/app/controllers/MainController.js" afterPath="$PROJECT_DIR$/Apps/app/controllers/MainController.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Apps/app/services/ModelUtils.js" afterPath="$PROJECT_DIR$/Apps/app/services/ModelUtils.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Apps/app/views/main.html" afterPath="$PROJECT_DIR$/Apps/app/views/main.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Cesium Project.iws" />
@@ -144,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ModelUtils.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ModelUtils.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Apps/app/services/ModelUtils.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1314">
-              <caret line="33" column="23" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="23" />
+            <state vertical-scroll-proportion="0.7078261" vertical-offset="187" max-vertical-offset="1314">
+              <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
               <folding />
             </state>
           </provider>
@@ -167,8 +104,8 @@
       <file leaf-file-name="main.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Apps/app/views/main.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.555555" vertical-offset="1443" max-vertical-offset="2106">
-              <caret line="105" column="38" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="38" />
+            <state vertical-scroll-proportion="-10.0" vertical-offset="1440" max-vertical-offset="2106">
+              <caret line="95" column="40" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
               <folding />
             </state>
           </provider>
@@ -194,11 +131,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainController.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Apps/app/controllers/MainController.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.1408696" vertical-offset="1072" max-vertical-offset="1944">
-              <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="1249" max-vertical-offset="1944">
+              <caret line="83" column="27" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
               <folding />
             </state>
           </provider>
@@ -255,8 +192,8 @@
         <option value="$PROJECT_DIR$/Apps/app/services/PinUtils.js" />
         <option value="$PROJECT_DIR$/Apps/css/core.css" />
         <option value="$PROJECT_DIR$/Apps/css/main.css" />
-        <option value="$PROJECT_DIR$/Apps/app/views/main.html" />
         <option value="$PROJECT_DIR$/Apps/app/services/ModelUtils.js" />
+        <option value="$PROJECT_DIR$/Apps/app/views/main.html" />
         <option value="$PROJECT_DIR$/Apps/app/controllers/MainController.js" />
       </list>
     </option>
@@ -1291,22 +1228,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/app/views/main.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.555555" vertical-offset="1443" max-vertical-offset="2106">
-          <caret line="105" column="38" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Apps/app/services/ModelUtils.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="378" max-vertical-offset="1314">
-          <caret line="33" column="23" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Apps/app/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
@@ -1315,10 +1236,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/app/views/main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0" vertical-offset="1440" max-vertical-offset="2106">
+          <caret line="95" column="40" selection-start-line="95" selection-start-column="40" selection-end-line="95" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Apps/app/controllers/MainController.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.1408696" vertical-offset="1072" max-vertical-offset="1944">
-          <caret line="96" column="37" selection-start-line="96" selection-start-column="37" selection-end-line="96" selection-end-column="37" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="1249" max-vertical-offset="1944">
+          <caret line="83" column="27" selection-start-line="83" selection-start-column="27" selection-end-line="83" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Apps/app/services/ModelUtils.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7078261" vertical-offset="187" max-vertical-offset="1314">
+          <caret line="33" column="12" selection-start-line="33" selection-start-column="12" selection-end-line="33" selection-end-column="12" />
           <folding />
         </state>
       </provider>

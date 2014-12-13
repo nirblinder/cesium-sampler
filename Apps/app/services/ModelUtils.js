@@ -15,8 +15,8 @@ cs.factory("ModelUtils", function (CesiumService, LocationUtils) {
         var constructModel = function (url, matrix) {
             return Cesium.Model.fromGltf({
                 url: url,
-                modelMatrix: matrix
-                //scale: 3000
+                modelMatrix: matrix,
+                scale: 3000
             });
         };
 

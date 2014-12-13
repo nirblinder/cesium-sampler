@@ -77,15 +77,15 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
     };
 
     $scope.addDroneModel = function () {
-        ModelUtils.createModel('/Apps/SampleData/models/drone/drone.gltf', 500.0);
+        ModelUtils.createModel('/Apps/SampleData/models/drone/drone.gltf', 2000.0);
     };
 
     $scope.addFighterModel = function () {
-        ModelUtils.createModel('/Apps/SampleData/models/plane/F15/F-15C_Eagle.gltf', 500.0);
+        ModelUtils.createModel('/Apps/SampleData/models/plane/F15/F-15C_Eagle.gltf', 6000.0);
     };
 
     $scope.addHelicopterModel = function () {
-        ModelUtils.createModel('/Apps/SampleData/models/drone/helicopter/helicopter.gltf', 300.0);
+        ModelUtils.createModel('/Apps/SampleData/models/drone/helicopter/helicopter.gltf', 3000.0);
     };
 
     $scope.addTankModel = function () {
