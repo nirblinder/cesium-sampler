@@ -1,0 +1,111 @@
+<div id="cesiumContainer" class="cesium-container"></div>
+<!-- camera actions -->
+<div class="container-fluid camera-buttons-container">
+    <div class="action-section">Camera</div>
+    <div class="row">
+        <button ng-click="flyToJerusalem()" class="action-button btn btn-info">fly To Jerusalem</button>
+    </div>
+    <div class="row">
+        <button ng-click="flyToRectangle()" class="action-button btn btn-info">fly To Rectangle</button>
+    </div>
+</div>
+
+<!-- pin actions -->
+<div class="container-fluid pin-buttons-container">
+    <div class="action-section">Pins</div>
+    <div class="row">
+        <div class="col-lg-8">
+            <div class="row">
+                <button ng-click="addBluePin()" class="action-button btn btn-primary">
+                    add Blue Pin
+                </button>
+            </div>
+            <div class="row">
+                <button ng-click="addRedPin()" class="action-button btn btn-danger">
+                    add Red Pin
+                </button>
+            </div>
+        </div>
+        <div class="col-lg-4">
+            <div class="pin-total-section" ng-if="totalPins > 0">
+                total pins : {{totalPins}}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- event listeners -->
+<div class="container-fluid pin-buttons-container event-buttons-container">
+    <div class="action-section">Events</div>
+    <div class="row">
+        <button ng-click="showLocationPicker()" class="action-button btn btn-info">
+            show location picker
+        </button>
+    </div>
+</div>
+
+<!-- billboards-->
+<div class="container-fluid billboards-buttons-container">
+    <div class="action-section">Billboards</div>
+    <div class="row">
+        <button ng-click="addBillboard()" class="action-button btn btn-info">
+            add Billboard
+        </button>
+    </div>
+    <div class="row">
+        <button ng-click="addBillboards()" class="action-button btn btn-info">
+            add Billboards
+        </button>
+    </div>
+</div>
+
+<!-- data sources -->
+<div class="container-fluid data-sources-buttons-container">
+    <div class="action-section">Data Sources</div>
+    <div class="row">
+        <button ng-click="addUsStatesDataSource()" class="action-button btn btn-info">
+            add us states
+        </button>
+    </div>
+    <div class="row">
+        <button ng-click="addCustomGeoJson()" class="action-button btn btn-info">
+            add custom geoJson
+        </button>
+    </div>
+</div>
+
+<!-- 3d models -->
+<div class="container-fluid models-buttons-container">
+    <div class="action-section">Data Sources</div>
+    <div class="row">
+        <button ng-click="addPlaneModel()" class="action-button btn btn-info">
+            add plane model (with zoom)
+        </button>
+    </div>
+    <div class="row">
+        <button ng-click="addDroneModel()" class="action-button btn btn-info">
+            add drone model (with zoom)
+        </button>
+    </div>
+    <div class="row">
+        <button ng-click="addFighterModel()" class="action-button btn btn-info">
+            add fighter model
+        </button>
+    </div>
+    <div class="row">
+        <button ng-click="addHelicopterModel()" class="action-button btn btn-info">
+            add helicopter model
+        </button>
+    </div>
+    <div class="row">
+        <button ng-click="addTankModel()" class="action-button btn btn-info">
+            add tank model
+        </button>
+    </div>
+    <div class="row">
+        <button ng-click="addAllModels()" class="action-button btn btn-info">
+            add all models
+        </button>
+    </div>
+</div>
+

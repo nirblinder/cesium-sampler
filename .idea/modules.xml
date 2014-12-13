@@ -3,7 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/Cesium Project.iml" filepath="$PROJECT_DIR$/.idea/Cesium Project.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Cesium-Sampler.iml" filepath="$PROJECT_DIR$/Cesium-Sampler.iml" />
     </modules>
   </component>
 </project>
-

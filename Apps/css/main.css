@@ -1,0 +1,78 @@
+@import url(../../Build/Cesium/Widgets/widgets.css);
+
+.cesium-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    height: 100%;
+}
+
+.camera-buttons-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.pin-buttons-container {
+    position: absolute;
+    left: 0;
+    top: 8em;
+}
+
+.event-buttons-container {
+    position: absolute;
+    left: 0;
+    top: 16em;
+}
+
+.billboards-buttons-container {
+    position: absolute;
+    left: 0;
+    top: 24em;
+}
+
+.data-sources-buttons-container {
+    position: absolute;
+    left: 0;
+    top: 32em;
+}
+
+.models-buttons-container {
+    position: absolute;
+    left: 0;
+    top: 40em;
+}
+
+.action-button {
+    width: 20em;
+    font-weight: bold;
+    margin-top: 3px;
+}
+
+.action-section {
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 18px;
+}
+
+.pin-total-section{
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 18px;
+}

@@ -1,0 +1,142 @@
+@import url('../../ThirdParty/dojo-release-1.9.3/dijit/themes/claro/claro.css');
+@import url('../../Source/Widgets/Animation/Animation.css');
+@import url('../../Source/Widgets/Animation/lighter.css');
+@import url('../../Source/Widgets/Timeline/Timeline.css');
+@import url('../../Source/Widgets/Timeline/lighter.css');
+
+body {
+    background: #000;
+    color: #C0CCCC;
+    font-family: "Open Sans", "Trebuchet MS", Sans-Serif;
+    font-size: 15px;
+    -webkit-transition: background-color, color;
+    -webkit-transition-duration: 1s;
+    -moz-transition: background-color, color;
+    -moz-transition-duration: 1s;
+    transition: background-color, color;
+    transition-duration: 1s;
+}
+
+body.cesium-lighter {
+    background: #FFF;
+    color: #000;
+}
+
+.startStopBlock {
+    overflow: hidden; /* causes it to contain floating children. */
+}
+
+.dateTimeBlock {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    border: solid 1px #888;
+    border-radius: 25px;
+    color: #000;
+    background: #444;
+}
+
+.cesium-lighter .dateTimeBlock {
+    background: #FFF;
+}
+
+.info {
+    display: block;
+    float: left;
+    margin-right: 10px;
+    font-family: Monospace;
+}
+
+.timeSel {
+    padding: 10px 20px;
+    color: #C0CCCC;
+}
+
+.cesium-lighter .timeSel {
+    color: #000;
+}
+
+.dateTimeBlock .dijitCalendarContainer {
+    margin: 5px auto 15px auto;
+}
+
+#timelineAndAnimation {
+    display: block;
+    clear: both;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 132px;
+    margin: 20px auto 0;
+    border-bottom: 1px solid #888;
+}
+
+.myAnimation {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 169px;
+    height: 111px;
+    -webkit-transition: none;
+    -webkit-transition-duration: 0;
+    -moz-transition: none;
+    -moz-transition-duration: 0;
+    transition: none;
+    transition-duration: 0;
+}
+
+.myTimeline {
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    left: 169px;
+    right: 0;
+    height: 59px;
+    overflow: hidden;
+}
+
+.usage {
+    display: block;
+    float: right;
+    width: 250px;
+    padding: 7px;
+    border: solid 1px #aaa;
+    border-radius: 5px;
+    margin: 10px 15px;
+}
+
+.usage h2 {
+    margin: 0 0 5px;
+    padding: 0;
+    border-bottom: solid 1px #aaa;
+    text-align: center;
+}
+
+.action {
+    font-family: monospace;
+    text-align: right;
+    white-space: nowrap;
+    padding-right: 5px;
+}
+
+table {
+    border: none;
+    border-collapse: collapse;
+}
+
+tr {
+    border-top: solid 1px #ddd;
+}
+
+.themeSelector {
+    display: block;
+    float: right;
+}
+
+#endBeforeStart {
+    display: none;
+    font-weight: bold;
+    color: #f00;
+}
