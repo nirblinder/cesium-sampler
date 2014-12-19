@@ -7,7 +7,7 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
                                           GeoJsonUtils, ModelUtils, $interval, ProgressService) {
     $scope.showLocationLabel = false;
     $scope.pinCount = 1000;
-    $scope.totalPins = 0;
+    $scope.billboardCountHolder = {value: 0};
     $scope.modelsLoaded = 0;
     $scope.modelLoadingMode = false;
 
@@ -39,8 +39,9 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
 
     $scope.addBluePin = function () {
         var points = [];
+        var bluePinCount = Math.floor(Math.random() * 10000) + 1000;
 
-        for (var i = 0; i < 9456; i++) {
+        for (var i = 0; i < bluePinCount; i++) {
             points.push({
                 geoX: LocationUtils.generateLocation(),
                 geoY: LocationUtils.generateLocation()
@@ -48,11 +49,9 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
         }
 
         ProgressService.showProgress();
-        PinUtils.addPins(points, "blue").then(function (bluePins) {
+        PinUtils.addPins(points, "blue", $scope.billboardCountHolder).then(function (bluePins) {
             ProgressService.hideProgress();
-            console.log("------------ added all blue pins ---------- ");
-
-            console.log("------------ starting blue pin marathon ---------- ");
+            console.log("added all blue pins, starting blue pin marathon");
 
             setInterval(function () {
                 bluePins.forEach(function (bluePin) {
@@ -67,14 +66,16 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
                     }
                     bluePin.position = Cesium.Cartesian3.fromDegrees(x, y);
                 });
-            }, 10);
+            }, 30);
         });
     };
 
     $scope.addRedPin = function () {
         var points = [];
 
-        for (var i = 0; i < 14568; i++) {
+        var redPinCount = Math.floor(Math.random() * 10000) + 1000;
+
+        for (var i = 0; i < redPinCount; i++) {
             points.push({
                 geoX: -LocationUtils.generateLocation(),
                 geoY: -LocationUtils.generateLocation()
@@ -82,17 +83,15 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
         }
 
         ProgressService.showProgress();
-        PinUtils.addPins(points, "red").then(function (redPins) {
+        PinUtils.addPins(points, "red", $scope.billboardCountHolder).then(function (redPins) {
             ProgressService.hideProgress();
-            console.log("------------ added all red pins ---------- ");
-            console.log("------------ starting red pin marathon ---------- ");
-
+            console.log("added all red pins, starting red pin marathon");
 
             setInterval(function () {
                 redPins.forEach(function (redPin) {
                     var carto = CesiumService.getViewer().scene.globe.ellipsoid.cartesianToCartographic(redPin.position);
-                    var x = (carto.longitude * 180 / Math.PI) - 0.02;
-                    var y = (carto.latitude * 180 / Math.PI) - 0.02;
+                    var x = (carto.longitude * 180 / Math.PI) - 0.01;
+                    var y = (carto.latitude * 180 / Math.PI) - 0.01;
                     if (x > 120) {
                         x = -120;
                     }
@@ -101,8 +100,7 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
                     }
                     redPin.position = Cesium.Cartesian3.fromDegrees(x, y);
                 });
-            }, 20);
-
+            }, 30);
         });
     };
 

@@ -9,11 +9,11 @@ cs.factory("PinUtils", function (CesiumService, BillboardUtils, LocationUtils) {
 
     return {
         pinOffset: -0.01,
-        addPins: function (points, color, billboardCollection) {
+        addPins: function (points, color, billboardCountHolder) {
             if (color === "blue") {
-                return BillboardUtils.addPinBillboards(points, bluePin);
+                return BillboardUtils.addPinBillboards(points, bluePin, billboardCountHolder);
             } else if (color === "red") {
-                return BillboardUtils.addPinBillboards(points, redPin);
+                return BillboardUtils.addPinBillboards(points, redPin, billboardCountHolder);
             }
 
             return undefined;

@@ -3,7 +3,10 @@
  */
 cs.factory("CesiumService", function () {
     return {
-        viewer: new Cesium.Viewer('cesiumContainer'),
+        viewer: new Cesium.Viewer('cesiumContainer', {
+            timeline: false,
+            animation: false
+        }),
         polylines: undefined,
         getViewer: function () {
             return this.viewer;
