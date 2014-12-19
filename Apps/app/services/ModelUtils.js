@@ -1,7 +1,7 @@
 /**
  * Created by Micha on 11/28/2014.
  */
-cs.factory("ModelUtils", function (CesiumService, LocationUtils) {
+cs.factory("ModelUtils", function (CesiumService, $q, LocationUtils) {
         var handler = new Cesium.ScreenSpaceEventHandler(CesiumService.getCanvas());
 
         handler.setInputAction(function (movement) {
@@ -31,6 +31,7 @@ cs.factory("ModelUtils", function (CesiumService, LocationUtils) {
             createModel: function (modelUrl, height) {
                 height = Cesium.defaultValue(height, 0.0);
 
+                var deferredModel = $q.defer();
                 var geoX = -120 + Math.random() * 6;
                 var geoY = 44 + Math.random() * 10;
 
@@ -41,6 +42,8 @@ cs.factory("ModelUtils", function (CesiumService, LocationUtils) {
                 var model = CesiumService.getScene().primitives.add(constructModel(modelUrl, modelMatrix));
 
                 model.readyToRender.addEventListener(function (model) {
+                    deferredModel.resolve(model);
+
                     // Play and loop all animations at half-speed
                     model.activeAnimations.addAll({
                         speedup: 0.5,
@@ -57,8 +60,9 @@ cs.factory("ModelUtils", function (CesiumService, LocationUtils) {
                     controller.minimumZoomDistance = r * 0.5;
                     camera.lookAt(new Cesium.Cartesian3(r, r, r), Cesium.Cartesian3.ZERO, Cesium.Cartesian3.UNIT_Z);
                 });
+
+                return deferredModel.promise;
             }
         }
     }
-)
-;
+);

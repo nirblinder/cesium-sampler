@@ -4,10 +4,12 @@
 cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
                                           CameraUtils, GeometryUtils, PinUtils,
                                           CesiumEventUtils, LabelUtils, LocationUtils,
-                                          GeoJsonUtils, ModelUtils) {
+                                          GeoJsonUtils, ModelUtils, $interval, ProgressService) {
     $scope.showLocationLabel = false;
     $scope.pinCount = 1000;
     $scope.totalPins = 0;
+    $scope.modelsLoaded = 0;
+    $scope.modelLoadingMode = false;
 
     $scope.addBillboards = function () {
         var geoX = -117.16, geoY = 32.71;
@@ -22,6 +24,10 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
         CameraUtils.flyToJerusalem();
     };
 
+    $scope.setMouseHandler = function () {
+        CameraUtils.setMouseHandler();
+    };
+
     $scope.flyToRectangle = function () {
         var west = -77.0;
         var south = 38.0;
@@ -32,17 +38,72 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
     };
 
     $scope.addBluePin = function () {
-        for (var i = 0; i < $scope.pinCount; i++) {
-            PinUtils.addPin("blue");
+        var points = [];
+
+        for (var i = 0; i < 9456; i++) {
+            points.push({
+                geoX: LocationUtils.generateLocation(),
+                geoY: LocationUtils.generateLocation()
+            });
         }
-        $scope.totalPins += $scope.pinCount;
+
+        ProgressService.showProgress();
+        PinUtils.addPins(points, "blue").then(function (bluePins) {
+            ProgressService.hideProgress();
+            console.log("------------ added all blue pins ---------- ");
+
+            console.log("------------ starting blue pin marathon ---------- ");
+
+            setInterval(function () {
+                bluePins.forEach(function (bluePin) {
+                    var carto = CesiumService.getViewer().scene.globe.ellipsoid.cartesianToCartographic(bluePin.position);
+                    var x = (carto.longitude * 180 / Math.PI) + 0.01;
+                    var y = (carto.latitude * 180 / Math.PI) + 0.01;
+                    if (x > 120) {
+                        x = -120;
+                    }
+                    if (y > 70) {
+                        y = -70;
+                    }
+                    bluePin.position = Cesium.Cartesian3.fromDegrees(x, y);
+                });
+            }, 10);
+        });
     };
 
     $scope.addRedPin = function () {
-        for (var i = 0; i < $scope.pinCount; i++) {
-            PinUtils.addPin("red");
+        var points = [];
+
+        for (var i = 0; i < 14568; i++) {
+            points.push({
+                geoX: -LocationUtils.generateLocation(),
+                geoY: -LocationUtils.generateLocation()
+            });
         }
-        $scope.totalPins += $scope.pinCount;
+
+        ProgressService.showProgress();
+        PinUtils.addPins(points, "red").then(function (redPins) {
+            ProgressService.hideProgress();
+            console.log("------------ added all red pins ---------- ");
+            console.log("------------ starting red pin marathon ---------- ");
+
+
+            setInterval(function () {
+                redPins.forEach(function (redPin) {
+                    var carto = CesiumService.getViewer().scene.globe.ellipsoid.cartesianToCartographic(redPin.position);
+                    var x = (carto.longitude * 180 / Math.PI) - 0.02;
+                    var y = (carto.latitude * 180 / Math.PI) - 0.02;
+                    if (x > 120) {
+                        x = -120;
+                    }
+                    if (y > 70) {
+                        y = -70;
+                    }
+                    redPin.position = Cesium.Cartesian3.fromDegrees(x, y);
+                });
+            }, 20);
+
+        });
     };
 
     var handleScreenSpaceEvent = function () {
@@ -74,9 +135,13 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
     };
 
     $scope.addPlaneModel = function () {
-        for (var i = 0; i < 500; i++) {
+        $scope.modelsToLoad = 500;
+        $scope.modelLoadingMode = true;
+
+        for (var i = 0; i < $scope.modelsToLoad; i++) {
             ModelUtils.createModel('/Apps/SampleData/models/plane/fighter.gltf', 5000.0);
         }
+
     };
 
     $scope.addDroneModel = function () {
@@ -84,13 +149,28 @@ cs.controller("MainController", function ($scope, CesiumService, BillboardUtils,
     };
 
     $scope.addFighterModel = function () {
-        for (var i = 0; i < 20; i++) {
-            ModelUtils.createModel('/Apps/SampleData/models/plane/F15/F-15C_Eagle.gltf', 6000.0);
+        $scope.modelsToLoad = 20;
+        $scope.modelLoadingMode = true;
+
+        for (var i = 0; i < $scope.modelsToLoad; i++) {
+            ModelUtils.createModel('/Apps/SampleData/models/plane/F15/F-15C_Eagle.gltf', 6000.0).then(function (ready) {
+                console.log(ready);
+            });
         }
     };
 
     $scope.addHelicopterModel = function () {
-        ModelUtils.createModel('/Apps/SampleData/models/drone/helicopter/helicopter.gltf', 3000.0);
+        ModelUtils.createModel('/Apps/SampleData/models/drone/helicopter/helicopter.gltf', 3000.0).then(function (model) {
+            console.log("model is ready!");
+            console.log(model);
+
+            $interval(function () {
+                var geoX = 30.12;
+                var geoY = 31.88;
+                model.modelMatrix = Cesium.Transforms.eastNorthUpToFixedFrame(Cesium.Cartesian3.fromDegrees(geoX, geoY, 3000.0));
+
+            }, 1000);
+        });
     };
 
     $scope.addTankModel = function () {

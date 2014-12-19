@@ -74,5 +74,11 @@ body {
 .pin-total-section{
     color: #ffffff;
     font-weight: bolder;
+    font-size: 14px;
+}
+
+.model-loading-section{
+    color: #ffffff;
+    font-weight: bolder;
     font-size: 18px;
 }

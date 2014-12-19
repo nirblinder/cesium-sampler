@@ -4,20 +4,19 @@
 cs.factory("PinUtils", function (CesiumService, BillboardUtils, LocationUtils) {
     var pinBuilder = CesiumService.getPinBuilder();
     var pin, baseGeoX = 34.96, baseGeoY = 31.88, randomGeoX, randomGeoY;
+    var bluePin = pinBuilder.fromText('Frog', Cesium.Color.ROYALBLUE, 48);
+    var redPin = pinBuilder.fromText('SA17', Cesium.Color.RED, 48);
+
     return {
         pinOffset: -0.01,
-        addPin: function (color) {
+        addPins: function (points, color, billboardCollection) {
             if (color === "blue") {
-                randomGeoX = -LocationUtils.generateLocation();
-                randomGeoY = -LocationUtils.generateLocation();
-                pin = pinBuilder.fromText('Frog', Cesium.Color.ROYALBLUE, 48);
-                BillboardUtils.addPinBillboard(pin, randomGeoX, randomGeoY);
+                return BillboardUtils.addPinBillboards(points, bluePin);
             } else if (color === "red") {
-                randomGeoX = LocationUtils.generateLocation();
-                randomGeoY = LocationUtils.generateLocation();
-                pin = pinBuilder.fromText('SA17', Cesium.Color.RED, 48);
-                BillboardUtils.addPinBillboard(pin, randomGeoX, randomGeoY);
+                return BillboardUtils.addPinBillboards(points, redPin);
             }
+
+            return undefined;
         }
     }
 });

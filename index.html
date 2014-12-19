@@ -1,51 +1,56 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="cesiumTest">
 <head>
-  <!-- Use correct character set. -->
-  <meta charset="utf-8">
-  <!-- Tell IE to use the latest, best version (or Chrome Frame if pre-IE11). -->
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-  <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
-  <title>Cesium Sampler</title>
+    <!-- Use correct character set. -->
+    <meta charset="utf-8">
+    <!-- Tell IE to use the latest, best version (or Chrome Frame if pre-IE11). -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
+    <!-- Make the application on mobile take up the full browser screen and disable user scaling. -->
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <title>Cesium Sampler</title>
 
-  <!-- cesium imports -->
-  <script src="/Build/Cesium/Cesium.js"></script>
+    <!-- cesium imports -->
+    <script src="/Build/Cesium/Cesium.js"></script>
 
-  <!-- css imports -->
-  <link rel="stylesheet" href="/Apps/css/main.css"/>
-  <link rel="stylesheet" href="/Apps/vendor/bootstrap/bootstrap.css"/>
+    <!-- css imports -->
+    <link rel="stylesheet" href="/Apps/css/main.css"/>
+    <link rel="stylesheet" href="/Apps/vendor/bootstrap/bootstrap.css"/>
+    <link rel="stylesheet" href="/Apps/vendor/nprogress/nprogress.css"/>
 
-  <!-- jquery imports -->
-  <script src="/Apps/vendor/jquery/jquery-2.1.1.js"></script>
+    <!-- jquery imports -->
+    <script src="/Apps/vendor/jquery/jquery-2.1.1.js"></script>
 
-  <!-- angular imports -->
-  <script src="/Apps/vendor/angular/angular.js"></script>
-  <script src="/Apps/vendor/angular/angular-route.js"></script>
-  <script src="/Apps/vendor/angular/angular-aria.js"></script>
-  <script src="/Apps/vendor/angular/angular-loader.js"></script>
-  <script src="/Apps/vendor/angular/angular-messages.js"></script>
-  <script src="/Apps/vendor/angular/angular-resource.js"></script>
-  <script src="/Apps/vendor/angular/angular-mocks.js"></script>
-  <script src="/Apps/vendor/angular/angular-animate.js"></script>
+    <!-- angular imports -->
+    <script src="/Apps/vendor/angular/angular.js"></script>
+    <script src="/Apps/vendor/angular/angular-route.js"></script>
+    <script src="/Apps/vendor/angular/angular-aria.js"></script>
+    <script src="/Apps/vendor/angular/angular-loader.js"></script>
+    <script src="/Apps/vendor/angular/angular-messages.js"></script>
+    <script src="/Apps/vendor/angular/angular-resource.js"></script>
+    <script src="/Apps/vendor/angular/angular-mocks.js"></script>
+    <script src="/Apps/vendor/angular/angular-animate.js"></script>
 
-  <!-- bootstrap imports -->
-  <script src="/Apps/vendor/bootstrap/bootstrap.js"></script>
+    <!-- bootstrap imports -->
+    <script src="/Apps/vendor/bootstrap/bootstrap.js"></script>
 
-  <!-- main script imports -->
-  <script src="/Apps/app/app.js"></script>
-  <script src="/Apps/app/controllers/MainController.js"></script>
-  <script src="/Apps/app/services/CesiumService.js"></script>
-  <script src="/Apps/app/services/BillboardUtils.js"></script>
-  <script src="/Apps/app/services/CameraUtils.js"></script>
-  <script src="/Apps/app/services/GeometryUtils.js"></script>
-  <script src="/Apps/app/services/PinUtils.js"></script>
-  <script src="/Apps/app/services/CesiumEventUtils.js"></script>
-  <script src="/Apps/app/services/LabelUtils.js"></script>
-  <script src="/Apps/app/services/LocationUtils.js"></script>
-  <script src="/Apps/app/services/GeoJsonUtils.js"></script>
-  <script src="/Apps/app/services/ModelUtils.js"></script>
+    <!-- nprogress imports -->
+    <script src="/Apps/vendor/nprogress/nprogress.js"></script>
+
+    <!-- main script imports -->
+    <script src="/Apps/app/app.js"></script>
+    <script src="/Apps/app/controllers/MainController.js"></script>
+    <script src="/Apps/app/services/CesiumService.js"></script>
+    <script src="/Apps/app/services/BillboardUtils.js"></script>
+    <script src="/Apps/app/services/CameraUtils.js"></script>
+    <script src="/Apps/app/services/GeometryUtils.js"></script>
+    <script src="/Apps/app/services/PinUtils.js"></script>
+    <script src="/Apps/app/services/CesiumEventUtils.js"></script>
+    <script src="/Apps/app/services/LabelUtils.js"></script>
+    <script src="/Apps/app/services/LocationUtils.js"></script>
+    <script src="/Apps/app/services/GeoJsonUtils.js"></script>
+    <script src="/Apps/app/services/ModelUtils.js"></script>
+    <script src="/Apps/app/services/ProgressService.js"></script>
 
 </head>
 <body>

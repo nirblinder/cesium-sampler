@@ -6,7 +6,7 @@
         <button ng-click="flyToJerusalem()" class="action-button btn btn-info">fly To Jerusalem</button>
     </div>
     <div class="row">
-        <button ng-click="flyToRectangle()" class="action-button btn btn-info">fly To Rectangle</button>
+        <button ng-click="setMouseHandler()" class="action-button btn btn-info">setMouseHandler</button>
     </div>
 </div>
 
@@ -88,9 +88,16 @@
         </button>
     </div>
     <div class="row">
-        <button ng-click="addFighterModel()" class="action-button btn btn-info">
-            add fighter model
-        </button>
+        <div ng-class="{'col-lg-6' : modelLoadingMode}">
+            <button ng-click="addFighterModel()" class="action-button btn btn-info">
+                add fighter model
+            </button>
+        </div>
+        <div class="col-lg-6">
+            <div class="model-loading-section" ng-if="modelLoadingMode">
+                {{modelsLoaded}} / {{modelsToLoad}}
+            </div>
+        </div>
     </div>
     <div class="row">
         <button ng-click="addHelicopterModel()" class="action-button btn btn-info">
